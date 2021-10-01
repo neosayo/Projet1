@@ -1,0 +1,47 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QLF CORP</title>
+  </head>
+
+  <body>
+    <h1>May Node and Express be with you.</h1>
+
+    <form action="/advertisements" method="POST">
+      <input type="text" placeholder="name" name="name" />
+      <input type="text" placeholder="quote" name="advertisements" />
+      <button type="submit">Submit</button>
+    </form>
+   <!-- <%for (let adv of advertisements) { %>
+    <%= adv.name %> 
+    <% } %>
+    <h2> Quotes </h2> -->
+
+    <div>
+      <form>
+        <input id="name" name="name" value="Anas">
+        <input id="advertisements" name="advertisements" value="Anas">
+        <h2>Rififi envahit</h2>
+      <p>
+        Replace first advertisements with a advertisements written by Rififi
+      </p>
+      <button type="submit" id="update-button">Replace yoda advertisements</button>
+      </form>
+    </div>  
+    
+<ul class="adv">
+  <!-- Loop through advertisements -->
+  <% for(var i = 0; i < advertisements.length; i++) {%>
+    <li class="advertisements">
+      <!-- Output name from the iterated advertisements object -->
+      <span><%= advertisements[i].name %></span>:
+      <!-- Output advertisements from the iterated advertisements object -->
+      <span><%= advertisements[i].advertisements %></span>
+    </li>
+  <% } %>
+</ul>
+<script src="/main.js"></script>
+  </body>
+</html>()
